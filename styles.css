@@ -1,0 +1,149 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: url('nvidia-bg.jpg') no-repeat center center fixed; /* NVIDIA background */
+    background-size: cover;  /* Covers the entire screen */
+}
+
+/* Adding semi-transparent background to make text readable */
+main {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);  /* Dark overlay for better contrast */
+    color: #000000;                  /* Black text for visibility */
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+
+header {
+    background: url('nvidia-camo.jpg') no-repeat center center; 
+    background-size: cover; /* Ensures the image covers the entire header */
+    color: white;            /* Better contrast with dark camo */
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Optional shadow for depth */
+}
+
+
+nav {
+    margin: 15px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;              
+    text-decoration: none;
+    font-weight: bold;         
+}
+
+nav a:hover {
+    color: #00ff00;            /* Optional: adds a green hover effect */
+    text-decoration: underline; /* Optional: underlines on hover */
+}
+
+
+h1 {
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Soft shadow */
+}
+
+
+
+main {
+    padding: 20px;
+    background: white;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    color: black;
+}
+
+footer {
+    background: url('nvidia-camo-footer.jpg') no-repeat center center;
+    background-size: cover;  /* Ensures the image covers the entire footer */
+    color: white;             /* Changes text color to white for contrast */
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Optional shadow for depth */
+}
+
+
+section {
+    margin-bottom: 20px;
+}
+
+ul {
+    margin-left: 20px;
+}
+
+strong {
+    color: #0077cc;
+}
+#logos {
+    text-align: center; /* Centers the content */
+    margin-top: 40px;
+}
+
+.logos-container {
+    display: flex;
+    justify-content: center; /* Centers logos horizontally */
+    gap: 20px; /* Adds space between the logos */
+    flex-wrap: wrap; /* Allows logos to wrap to the next line if the screen is small */
+}
+
+.logo {
+    width: 120px; /* Adjust logo size */
+    height: auto;
+    transition: transform 0.3s ease; /* Smooth transition effect */
+}
+
+.logo:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Popping button styles */
+.popup-btn {
+    background-color: #0077cc; /* Blue background */
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    position: fixed; /* Keeps button in the same place on screen */
+    bottom: 20px; /* Positioned at the bottom */
+    right: 20px;  /* Positioned to the right */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    animation: bounce 1s ease infinite; /* Makes it bounce */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for pop effect */
+}
+
+/* Hover effect - scales the button */
+.popup-btn:hover {
+    transform: scale(1.2); /* Enlarges the button when hovered */
+}
+
+/* Bouncing animation */
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
