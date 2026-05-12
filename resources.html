@@ -1,54 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resources - Harnessing Power</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resources — Harnessing Power</title>
+  <meta name="description" content="Curated resources for computer hardware — research papers, official docs, benchmarking tools, online courses, and news sources.">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Resources</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="introduction.html">Introduction</a></li>
-                <li><a href="latest-technologies.html">Latest Technologies</a></li>
-                <li><a href="future-trends.html">Future Trends</a></li>
-                <li><a href="resources.html">Resources</a></li>
-                <li><a href="contact.html">Contact</a></li>
-		<li><a href="videos.html">videos</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <section>
-            <h2>Additional Resources</h2>
-            <p>Explore these links for more information:</p>
-            <ul>
-                <li><a href="https://www.intel.com" target="_blank">Intel</a> - Leading manufacturer of processors and hardware components.</li>
-                <li><a href="https://www.amd.com" target="_blank">AMD</a> - Known for high-performance processors and graphics cards.</li>
-                <li><a href="https://www.nvidia.com" target="_blank">NVIDIA</a> - Leader in GPU technology and AI computing.</li>
-                <li><a href="https://www.ibm.com" target="_blank">IBM</a> - Innovator in quantum computing and enterprise hardware solutions.</li>
-            </ul>
-        </section>
-    
-        <!-- Logos Section -->
-        <section id="logos">
-            <h2>Partnered Companies</h2>
-            <div class="logos-container">
-                <img src="intel-logo.png" alt="Intel Logo" class="logo">
-                <img src="amd-logo.png" alt="AMD Logo" class="logo">
-                <img src="nvidia-logo.png" alt="NVIDIA Logo" class="logo">
-                <img src="ibm-logo.png" alt="IBM Logo" class="logo">
-            </div>
-        </section>
-    </main>
-    
+<!-- NEWS TICKER -->
+<div class="news-ticker">
+  <div class="ticker-label">📚 Resources</div>
+  <div class="ticker-track">
+    <div class="ticker-inner">
+      <span class="ticker-item">IEEE Spectrum: "The Chiplet Revolution" — free access on ieee.org/spectrum this month</span>
+      <span class="ticker-item">Hot Chips 2025 talks now available on YouTube — NVIDIA Blackwell deep dive by NVIDIA engineers</span>
+      <span class="ticker-item">Coursera: "Hardware Security" by University of Maryland — free audit, starts June 2025</span>
+      <span class="ticker-item">ISSCC 2025 proceedings available — record 400+ papers on advanced chip design</span>
+      <span class="ticker-item">IEEE Spectrum: "The Chiplet Revolution" — free access on ieee.org/spectrum this month</span>
+      <span class="ticker-item">Hot Chips 2025 talks now available on YouTube — NVIDIA Blackwell deep dive by NVIDIA engineers</span>
+    </div>
+  </div>
+</div>
 
-    <footer>
-        <p>&copy; 2024 Harnessing Power Project. All rights reserved.</p>
-    </footer>
+<header>
+  <div class="site-logo">Harnessing<span>Power</span></div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="introduction.html">Introduction</a></li>
+      <li><a href="latest-technologies.html">Technologies</a></li>
+      <li><a href="future-trends.html">Future Trends</a></li>
+      <li><a href="resources.html" class="active">Resources</a></li>
+      <li><a href="videos.html">Videos</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <div class="page-header reveal">
+    <div class="page-header-left">
+      <div class="page-label">Reference Library</div>
+      <h2>Resources</h2>
+    </div>
+  </div>
+
+  <!-- RESEARCH & PAPERS -->
+  <section class="reveal">
+    <div class="resource-section">
+      <div class="resource-section-title">Research & Technical Papers</div>
+      <ul class="resource-list">
+        <li>
+          <span class="resource-icon">📄</span>
+          <a href="https://ieeexplore.ieee.org" target="_blank" rel="noopener">IEEE Xplore Digital Library — largest technical library for electronics and computer engineering research papers</a>
+          <span class="resource-meta">IEEE</span>
+        </li>
+        <li>
+          <span class="resource-icon">📄</span>
+          <a href="https://arxiv.org/cs.AR" target="_blank" rel="noopener">arXiv cs.AR — Hardware Architecture preprints: CPU, GPU, and accelerator research before formal publication</a>
+          <span class="resource-meta">arXiv</span>
+        </li>
+        <li>
+          <span class="resource-icon">📄</span>
+          <a href="https://dl.acm.org/sig/sigarch" target="_blank" rel="noopener">ACM SIGARCH — ACM Special Interest Group on Computer Architecture papers and proceedings</a>
+          <span class="resource-meta">ACM</span>
+        </li>
+        <li>
+          <span class="resource-icon">📄</span>
+          <a href="https://hotchips.org" target="_blank" rel="noopener">Hot Chips Symposium — annual conference where AMD, NVIDIA, Apple, and Google present chip architecture deep dives</a>
+          <span class="resource-meta">Hot Chips</span>
+        </li>
+        <li>
+          <span class="resource-icon">📄</span>
+          <a href="https://isscc.org" target="_blank" rel="noopener">ISSCC — International Solid-State Circuits Conference, premier venue for cutting-edge circuit and chip design</a>
+          <span class="resource-meta">ISSCC</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- OFFICIAL DOCS -->
+    <div class="resource-section">
+      <div class="resource-section-title">Official Documentation & Whitepapers</div>
+      <ul class="resource-list">
+        <li>
+          <span class="resource-icon">🟢</span>
+          <a href="https://www.nvidia.com/en-us/data-center/resources/blackwell-architecture-technical-overview/" target="_blank" rel="noopener">NVIDIA Blackwell Architecture Technical Overview — official GPU whitepaper with full micro-architecture details</a>
+          <span class="resource-meta">NVIDIA</span>
+        </li>
+        <li>
+          <span class="resource-icon">🔴</span>
+          <a href="https://www.amd.com/en/technologies/epyc-tech-docs" target="_blank" rel="noopener">AMD EPYC Technical Docs — processor specifications, programming references, and BIOS guides</a>
+          <span class="resource-meta">AMD</span>
+        </li>
+        <li>
+          <span class="resource-icon">🔵</span>
+          <a href="https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html" target="_blank" rel="noopener">Intel Software Developer Manuals — definitive x86/x64 architecture reference for all Intel processors</a>
+          <span class="resource-meta">Intel</span>
+        </li>
+        <li>
+          <span class="resource-icon">🟣</span>
+          <a href="https://research.ibm.com/quantum-computing" target="_blank" rel="noopener">IBM Quantum Research — papers, system status, and technical details for IBM's quantum hardware</a>
+          <span class="resource-meta">IBM Research</span>
+        </li>
+        <li>
+          <span class="resource-icon">⬛</span>
+          <a href="https://www.tsmc.com/english/dedicatedFoundry/technology/overview.htm" target="_blank" rel="noopener">TSMC Technology Overview — official process node roadmap and packaging technology descriptions</a>
+          <span class="resource-meta">TSMC</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- BENCHMARKING TOOLS -->
+    <div class="resource-section">
+      <div class="resource-section-title">Benchmarking & Performance Tools</div>
+      <ul class="resource-list">
+        <li>
+          <span class="resource-icon">⚡</span>
+          <a href="https://www.spec.org/cpu2017/" target="_blank" rel="noopener">SPEC CPU 2017 — industry-standard CPU benchmarking suite used by Intel, AMD, and ARM to compare processors</a>
+          <span class="resource-meta">SPEC</span>
+        </li>
+        <li>
+          <span class="resource-icon">⚡</span>
+          <a href="https://www.techpowerup.com/gpu-specs/" target="_blank" rel="noopener">TechPowerUp GPU Specs Database — specifications for every GPU ever released, with benchmark comparisons</a>
+          <span class="resource-meta">TechPowerUp</span>
+        </li>
+        <li>
+          <span class="resource-icon">⚡</span>
+          <a href="https://www.cpubenchmark.net/" target="_blank" rel="noopener">PassMark CPU Benchmark — crowd-sourced CPU performance database with over 1 million benchmark results</a>
+          <span class="resource-meta">PassMark</span>
+        </li>
+        <li>
+          <span class="resource-icon">⚡</span>
+          <a href="https://nanoreview.net/" target="_blank" rel="noopener">Nanoreview — SoC and mobile chip comparison tool with performance-per-watt rankings and detailed specs</a>
+          <span class="resource-meta">Nanoreview</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- NEWS & ANALYSIS -->
+    <div class="resource-section">
+      <div class="resource-section-title">News & Industry Analysis</div>
+      <ul class="resource-list">
+        <li>
+          <span class="resource-icon">📰</span>
+          <a href="https://spectrum.ieee.org" target="_blank" rel="noopener">IEEE Spectrum — flagship IEEE publication covering semiconductor technology, AI hardware, and quantum computing</a>
+          <span class="resource-meta">IEEE Spectrum</span>
+        </li>
+        <li>
+          <span class="resource-icon">📰</span>
+          <a href="https://www.anandtech.com" target="_blank" rel="noopener">AnandTech — in-depth CPU, GPU, and SSD reviews with detailed micro-architecture analysis (archived 2023, still essential)</a>
+          <span class="resource-meta">AnandTech</span>
+        </li>
+        <li>
+          <span class="resource-icon">📰</span>
+          <a href="https://www.semianalysis.com" target="_blank" rel="noopener">SemiAnalysis — semiconductor industry analysis covering chip supply chains, fab economics, and AI hardware strategy</a>
+          <span class="resource-meta">SemiAnalysis</span>
+        </li>
+        <li>
+          <span class="resource-icon">📰</span>
+          <a href="https://www.tomshardware.com" target="_blank" rel="noopener">Tom's Hardware — comprehensive hardware reviews, news, and buyer's guides for CPUs, GPUs, memory, and storage</a>
+          <span class="resource-meta">Tom's Hardware</span>
+        </li>
+        <li>
+          <span class="resource-icon">📰</span>
+          <a href="https://www.nextplatform.com" target="_blank" rel="noopener">The Next Platform — enterprise and HPC hardware analysis: servers, accelerators, and data centre infrastructure</a>
+          <span class="resource-meta">Next Platform</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- LEARNING -->
+    <div class="resource-section">
+      <div class="resource-section-title">Courses & Learning</div>
+      <ul class="resource-list">
+        <li>
+          <span class="resource-icon">🎓</span>
+          <a href="https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/" target="_blank" rel="noopener">MIT OCW 6.004 — Computation Structures: digital logic, processor design, and memory hierarchies (free)</a>
+          <span class="resource-meta">MIT OCW</span>
+        </li>
+        <li>
+          <span class="resource-icon">🎓</span>
+          <a href="https://www.coursera.org/learn/comparch" target="_blank" rel="noopener">Coursera: Computer Architecture (Princeton) — in-depth processor design, pipelining, caches, and modern microarchitecture</a>
+          <span class="resource-meta">Coursera</span>
+        </li>
+        <li>
+          <span class="resource-icon">🎓</span>
+          <a href="https://quantum.country" target="_blank" rel="noopener">Quantum Country — spaced-repetition textbook on quantum computing fundamentals by Andy Matuschak and Michael Nielsen</a>
+          <span class="resource-meta">Quantum Country</span>
+        </li>
+        <li>
+          <span class="resource-icon">🎓</span>
+          <a href="https://www.edx.org/learn/computer-hardware" target="_blank" rel="noopener">edX Computer Hardware Courses — free audit access to university courses on digital circuits, VLSI, and embedded systems</a>
+          <span class="resource-meta">edX</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">Harnessing<span>Power</span></div>
+      <div class="footer-desc">B.Tech CSE · 4th Semester · Computer Hardware Project · 2025</div>
+    </div>
+    <nav class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="introduction.html">Intro</a>
+      <a href="latest-technologies.html">Tech</a>
+      <a href="future-trends.html">Trends</a>
+      <a href="resources.html">Resources</a>
+      <a href="videos.html">Videos</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Harnessing Power Project. All rights reserved.</span>
+    <span>Built with ❤ for <span class="footer-accent">B.Tech CSE</span></span>
+  </div>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
 </body>
 </html>
