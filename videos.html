@@ -1,44 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Videos - Innovations in Modern Computer Hardware</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Videos — Harnessing Power</title>
+  <meta name="description" content="Curated video deep-dives into GPUs, quantum computing, CPU architecture, AI accelerators, and the future of computer hardware.">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .video-section {
+      margin-bottom: 56px;
+      padding-bottom: 56px;
+      border-bottom: 1px solid var(--border);
+    }
+    .video-section:last-child { border-bottom: none; }
+    .video-section-header {
+      display: flex; align-items: center; gap: 12px; margin-bottom: 8px;
+    }
+    .video-section h3 {
+      font-family: var(--font-head);
+      font-size: 1.3rem; font-weight: 700;
+      color: var(--light); letter-spacing: -0.01em;
+    }
+    .video-playlist {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 2px; background: var(--border); border-radius: var(--radius);
+      overflow: hidden; margin-top: 24px;
+    }
+    @media (max-width: 640px) { .video-playlist { grid-template-columns: 1fr; } }
+    .playlist-card {
+      background: var(--card); padding: 22px;
+      display: flex; gap: 14px; align-items: flex-start;
+      transition: background 0.2s; cursor: pointer; text-decoration: none;
+    }
+    .playlist-card:hover { background: var(--card-hover); }
+    .playlist-num {
+      font-family: var(--font-mono); font-size: 0.7rem;
+      color: var(--accent); flex-shrink: 0; line-height: 1; margin-top: 3px;
+    }
+    .playlist-info h4 {
+      font-family: var(--font-head); font-size: 0.88rem; font-weight: 700;
+      color: var(--light); letter-spacing: -0.01em; margin-bottom: 4px;
+      text-transform: none;
+    }
+    .playlist-info p { font-size: 0.72rem; color: var(--muted); margin: 0; line-height: 1.6; }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Videos</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="introduction.html">Introduction</a></li>
-                <li><a href="latest-technologies.html">Latest Technologies</a></li>
-                <li><a href="future-trends.html">Future Trends</a></li>
-                <li><a href="resources.html">Resources</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <main>
-        <section id="videos">
-            <h2>Featured Videos</h2>
-            <p>Explore the latest advancements in computer hardware through these informative videos.</p>
-            
-            <div class="video-container">
-                <h3>NEW GPU SERIES</h3>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/SRiV0RgHWI0?si=OLb-VvtYJfmS-MCQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            </div>
-            
-            <div class="video-container">
-                <h3>TECH TALK</h3>
-               <iframe width="560" height="315" src="https://www.youtube.com/embed/XRfk0CJkIgM?si=tdjbm2mKfniQ95r7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-        </section>
-    </main>
-    
-    <footer>
-        <p>&copy; 2024 Harnessing Power Project. All rights reserved.</p>
-    </footer>
+
+<!-- NEWS TICKER -->
+<div class="news-ticker">
+  <div class="ticker-label">🎬 Media</div>
+  <div class="ticker-track">
+    <div class="ticker-inner">
+      <span class="ticker-item">Linus Tech Tips: RTX 5090 vs RX 9070 XT — full review with thermal analysis and gaming benchmarks</span>
+      <span class="ticker-item">Level1Techs: EPYC Turin deep dive — 192 cores, 384MB L3 cache, real-world server workloads</span>
+      <span class="ticker-item">Gamers Nexus: NVIDIA Blackwell GPU die analysis and architecture breakdown</span>
+      <span class="ticker-item">Dave2D: Apple M4 Max — is this the best laptop CPU of 2025?</span>
+      <span class="ticker-item">Computerphile: How Quantum Computers Work — 4M+ views, still the best explainer</span>
+      <span class="ticker-item">Linus Tech Tips: RTX 5090 vs RX 9070 XT — full review with thermal analysis and gaming benchmarks</span>
+      <span class="ticker-item">Level1Techs: EPYC Turin deep dive — 192 cores, 384MB L3 cache, real-world server workloads</span>
+    </div>
+  </div>
+</div>
+
+<header>
+  <div class="site-logo">Harnessing<span>Power</span></div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="introduction.html">Introduction</a></li>
+      <li><a href="latest-technologies.html">Technologies</a></li>
+      <li><a href="future-trends.html">Future Trends</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="videos.html" class="active">Videos</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <div class="page-header reveal">
+    <div class="page-header-left">
+      <div class="page-label">Watch & Learn</div>
+      <h2>Featured Videos</h2>
+    </div>
+  </div>
+
+  <section class="reveal">
+    <p style="margin-bottom:40px;">Expert-curated videos covering the full breadth of modern computer hardware — from architecture deep dives to AI accelerator teardowns and quantum computing explainers.</p>
+
+    <!-- VIDEO 1 -->
+    <div class="video-section">
+      <div class="video-section-header">
+        <span class="news-tag gpu">GPU</span>
+        <h3>Next-Generation GPU Architecture</h3>
+      </div>
+      <p style="font-size:0.82rem;color:var(--muted);margin-bottom:12px;">A deep dive into NVIDIA Blackwell and AMD RDNA 4 — what the latest GPU architectures mean for gaming, AI inference, and creative workloads in 2025.</p>
+      <div class="video-embed">
+        <iframe src="https://www.youtube.com/embed/SRiV0RgHWI0?si=OLb-VvtYJfmS-MCQ"
+          title="Next-Gen GPU Architecture" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <!-- VIDEO 2 -->
+    <div class="video-section">
+      <div class="video-section-header">
+        <span class="news-tag cpu">Hardware</span>
+        <h3>Tech Talk — Hardware Innovations 2025</h3>
+      </div>
+      <p style="font-size:0.82rem;color:var(--muted);margin-bottom:12px;">Expert panel discussion on chiplet architectures, AI silicon, and where the hardware industry is headed over the next decade.</p>
+      <div class="video-embed">
+        <iframe src="https://www.youtube.com/embed/XRfk0CJkIgM?si=tdjbm2mKfniQ95r7"
+          title="Tech Talk Hardware 2025" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <!-- RECOMMENDED CHANNELS -->
+    <div class="video-section" style="border-bottom:none;">
+      <div class="page-label" style="margin-bottom:12px;">Recommended Channels</div>
+      <h3>📺 Essential Watching</h3>
+      <p style="font-size:0.82rem;color:var(--muted);margin-bottom:0;">Deep-dive hardware content curated for B.Tech CSE students and hardware enthusiasts. Search these channels on YouTube.</p>
+      <div class="video-playlist">
+        <a href="https://www.youtube.com/@GamersNexus" target="_blank" rel="noopener" class="playlist-card">
+          <span class="playlist-num">01</span>
+          <div class="playlist-info">
+            <h4>Gamers Nexus — Hardware Reviews</h4>
+            <p>Thermal analysis, GPU/CPU benchmarks, and engineering teardowns. The most rigorous hardware testing channel on YouTube.</p>
+          </div>
+        </a>
+        <a href="https://www.youtube.com/@Computerphile" target="_blank" rel="noopener" class="playlist-card">
+          <span class="playlist-num">02</span>
+          <div class="playlist-info">
+            <h4>Computerphile — How Computers Work</h4>
+            <p>University of Nottingham academics explain CPU architecture, quantum computing, and storage theory in approachable depth.</p>
+          </div>
+        </a>
+        <a href="https://www.youtube.com/@Level1Techs" target="_blank" rel="noopener" class="playlist-card">
+          <span class="playlist-num">03</span>
+          <div class="playlist-info">
+            <h4>Level1Techs — Deep Dives</h4>
+            <p>Enterprise hardware, EPYC, workstation builds, and detailed architectural analysis of AMD and Intel server silicon.</p>
+          </div>
+        </a>
+        <a href="https://www.youtube.com/@IBMTechnology" target="_blank" rel="noopener" class="playlist-card">
+          <span class="playlist-num">04</span>
+          <div class="playlist-info">
+            <h4>IBM Technology — Quantum & AI</h4>
+            <p>Official IBM content covering quantum computing, AI hardware, and semiconductor fundamentals for students and professionals.</p>
+          </div>
+        </a>
+        <a href="https://www.youtube.com/@LinusTechTips" target="_blank" rel="noopener" class="playlist-card">
+          <span class="playlist-num">05</span>
+          <div class="playlist-info">
+            <h4>Linus Tech Tips — Consumer Hardware</h4>
+            <p>Accessible consumer hardware coverage — GPU launches, PC builds, and tech comparisons with accessible presentation style.</p>
+          </div>
+        </a>
+        <a href="https://www.youtube.com/@SemiconductorAcademy" target="_blank" rel="noopener" class="playlist-card">
+          <span class="playlist-num">06</span>
+          <div class="playlist-info">
+            <h4>Semiconductor Academy — VLSI</h4>
+            <p>VLSI design, semiconductor fabrication processes, and chip architecture explained specifically for engineering students.</p>
+          </div>
+        </a>
+        <a href="https://www.youtube.com/@EEVblog" target="_blank" rel="noopener" class="playlist-card">
+          <span class="playlist-num">07</span>
+          <div class="playlist-info">
+            <h4>EEVblog — Electronics Engineering</h4>
+            <p>Dave Jones covers electronics fundamentals, oscilloscope teardowns, and component-level circuit analysis for engineers.</p>
+          </div>
+        </a>
+        <a href="https://www.youtube.com/@TwoMinutePapers" target="_blank" rel="noopener" class="playlist-card">
+          <span class="playlist-num">08</span>
+          <div class="playlist-info">
+            <h4>Two Minute Papers — AI Research</h4>
+            <p>Accessible summaries of cutting-edge AI and hardware research papers — a great way to stay current on academic developments.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">Harnessing<span>Power</span></div>
+      <div class="footer-desc">B.Tech CSE · 4th Semester · Computer Hardware Project · 2025</div>
+    </div>
+    <nav class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="introduction.html">Intro</a>
+      <a href="latest-technologies.html">Tech</a>
+      <a href="future-trends.html">Trends</a>
+      <a href="resources.html">Resources</a>
+      <a href="videos.html">Videos</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Harnessing Power Project. All rights reserved.</span>
+    <span>Built with ❤ for <span class="footer-accent">B.Tech CSE</span></span>
+  </div>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
 </body>
 </html>
