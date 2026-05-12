@@ -1,75 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Future Trends - Harnessing Power</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Future Trends — Harnessing Power</title>
+  <meta name="description" content="The future of computer hardware — AI integration, quantum advances, neuromorphic computing, energy efficiency, and post-silicon technologies.">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .forecast-table { width:100%; border-collapse:collapse; font-size:0.82rem; margin-bottom:32px; border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; }
+    .forecast-table thead tr { background:var(--surface); }
+    .forecast-table th { font-family:var(--font-mono); font-size:0.62rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); padding:14px 18px; text-align:left; border-bottom:1px solid var(--border); }
+    .forecast-table td { padding:13px 18px; border-bottom:1px solid var(--border); color:var(--text); background:var(--card); font-size:0.8rem; }
+    .forecast-table tr:last-child td { border-bottom:none; }
+    .forecast-table tr:hover td { background:var(--card-hover); }
+    .forecast-table td:first-child { font-weight:600; color:var(--light); white-space:nowrap; }
+    .td-year { font-family:var(--font-mono); color:var(--accent); font-size:0.75rem; }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Future Trends in Computer Hardware</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="introduction.html">Introduction</a></li>
-                <li><a href="latest-technologies.html">Latest Technologies</a></li>
-                <li><a href="future-trends.html">Future Trends</a></li>
-                <li><a href="resources.html">Resources</a></li>
-                <li><a href="contact.html">Contact</a></li>
-		<li><a href="videos.html">videos</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <section>
-            <h2>Emerging Trends</h2>
-            <ul>
-                <li><strong>Energy Efficiency:</strong> Innovations focusing on reducing power consumption while maintaining performance.</li>
-                <li><strong>Integration of AI:</strong> Smart hardware that adapts to user behavior, optimizing resource allocation.</li>
-                <li><strong>Modular Design:</strong> Allowing users to easily upgrade components, enhancing longevity and sustainability.</li>
-                <li><strong>Edge Computing:</strong> Processing data closer to the source to reduce latency and bandwidth use, crucial for IoT applications.</li>
-            </ul>
-<p>
-<h3>Here’s a focused overview of future trends in computer hardware:</h3>
+<!-- NEWS TICKER -->
+<div class="news-ticker">
+  <div class="ticker-label">🚀 Future</div>
+  <div class="ticker-track">
+    <div class="ticker-inner">
+      <span class="ticker-item">Intel predicts 1 trillion transistors on a single package by 2030 via heterogeneous 3D integration</span>
+      <span class="ticker-item">McKinsey: quantum computing could unlock $700B–$1.6T annual value by 2035 in pharma, finance, logistics</span>
+      <span class="ticker-item">Neuromorphic chips like Intel Loihi 2 demonstrate 1,000× better energy efficiency vs GPU for sparse AI tasks</span>
+      <span class="ticker-item">DARPA funds photonic computing research — light-speed data interconnects within chips by late 2020s</span>
+      <span class="ticker-item">Intel predicts 1 trillion transistors on a single package by 2030 via heterogeneous 3D integration</span>
+      <span class="ticker-item">McKinsey: quantum computing could unlock $700B–$1.6T annual value by 2035 in pharma, finance, logistics</span>
+      <span class="ticker-item">Neuromorphic chips like Intel Loihi 2 demonstrate 1,000× better energy efficiency vs GPU for sparse AI tasks</span>
+    </div>
+  </div>
+</div>
 
-Future Trends in Computer Hardware
-<h4>1. AI Integration</h4>
-Overview: Artificial intelligence will increasingly be integrated into hardware systems to enhance performance and user experience.
-Trend: Smart devices will adapt and learn from user behavior, improving functionality and efficiency.
-<h4>2. Quantum Computing Advancements</h4>
-Overview: Continued research and investment in quantum computing technologies will lead to practical applications.
-Trend: Businesses will adopt quantum computing for complex problem-solving in fields like cryptography, finance, and pharmaceuticals.
-<h4>3. Increased Energy Efficiency</h4>
-Overview: As energy costs rise and environmental concerns grow, hardware design will focus on sustainability.
-Trend: Development of low-power components and energy-efficient architectures will become standard.
-<h4>4. Modular Computing</h4>
-Overview: Modular designs will allow users to easily upgrade specific hardware components.
-Trend: This will extend the lifespan of devices and reduce electronic waste, promoting sustainability.
-<h4>5. Edge Computing Expansion</h4>
-Overview: With the growth of IoT, processing power will move closer to data sources.
-Trend: Edge devices will become commonplace, enabling real-time data processing and reducing latency.
-<h4>6. Enhanced Connectivity with 5G</h4>
-Overview: The rollout of 5G technology will transform device connectivity.
-Trend: Faster, more reliable connections will facilitate advancements in smart technologies and remote work.
-<h4>7. Emergence of Neuromorphic Computing</h4>
-Overview: Neuromorphic computing mimics the human brain’s architecture to improve processing efficiency.
-Trend: This technology will enhance AI and machine learning applications by allowing for more complex, brain-like processing.
-<h4>8. 3D Stacking and Advanced Packaging</h4>
-Overview: Innovations in chip packaging, like 3D stacking, will improve performance and reduce space.
-Trend: Increased density and efficiency will lead to smaller, more powerful devices.
-<h4>9. Rise of Biometric Security</h4>
-Overview: Biometric technologies will become standard for device security.
-Trend: Hardware will integrate advanced biometric sensors for authentication, enhancing security measures.
-<h4>10. Customization and Personalization</h4>
-Overview: Future hardware will focus on user-specific customization.
-Trend: Components tailored to individual needs will allow for more personalized computing experiences.</p>
-        </section>
-    </main>
+<header>
+  <div class="site-logo">Harnessing<span>Power</span></div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="introduction.html">Introduction</a></li>
+      <li><a href="latest-technologies.html">Technologies</a></li>
+      <li><a href="future-trends.html" class="active">Future Trends</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="videos.html">Videos</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-    <footer>
-        <p>&copy; 2024 Harnessing Power Project. All rights reserved.</p>
-    </footer>
+<main>
+  <div class="page-header reveal">
+    <div class="page-header-left">
+      <div class="page-label">Chapter 03</div>
+      <h2>Future Trends</h2>
+    </div>
+  </div>
+
+  <!-- TREND CARDS -->
+  <section class="reveal">
+    <h2>Emerging Trends at a Glance</h2>
+    <div class="trend-grid">
+      <div class="trend-card">
+        <span class="trend-icon">🧠</span>
+        <h3>AI Integration</h3>
+        <p>Neural Processing Units embedded in every chip — from smartphones to data centre processors — making AI inference ambient and always-on.</p>
+        <span class="trend-year">Impact: 2025–2027</span>
+      </div>
+      <div class="trend-card">
+        <span class="trend-icon">⚛️</span>
+        <h3>Quantum Advantage</h3>
+        <p>Fault-tolerant quantum computers solving practical problems in chemistry and finance that classical hardware cannot, at commercially viable scale.</p>
+        <span class="trend-year">Impact: 2028–2032</span>
+      </div>
+      <div class="trend-card">
+        <span class="trend-icon">🔋</span>
+        <h3>Energy Efficiency</h3>
+        <p>Sub-watt AI inference, gallium nitride power delivery, and liquid cooling at rack scale — making sustainable computing the industry default.</p>
+        <span class="trend-year">Impact: 2025–2028</span>
+      </div>
+      <div class="trend-card">
+        <span class="trend-icon">🧩</span>
+        <h3>Modular Computing</h3>
+        <p>Chiplet ecosystems and standardised die interfaces (UCIe) enabling mix-and-match hardware — one CPU die, any GPU, any memory, any I/O.</p>
+        <span class="trend-year">Impact: 2026–2030</span>
+      </div>
+      <div class="trend-card">
+        <span class="trend-icon">🌐</span>
+        <h3>Edge Intelligence</h3>
+        <p>Full LLM inference at the edge — 70B parameter models running on-device by 2027, eliminating cloud latency for AI applications.</p>
+        <span class="trend-year">Impact: 2026–2029</span>
+      </div>
+      <div class="trend-card">
+        <span class="trend-icon">🧬</span>
+        <h3>Neuromorphic Chips</h3>
+        <p>Brain-inspired spiking neural network processors achieving 1,000× better energy efficiency than GPUs for event-driven AI tasks.</p>
+        <span class="trend-year">Impact: 2027–2032</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROADMAP TABLE -->
+  <section class="reveal">
+    <div class="page-label">Industry Roadmap</div>
+    <h2>Hardware Forecast 2025–2035</h2>
+    <table class="forecast-table">
+      <thead>
+        <tr><th>Technology</th><th>Timeline</th><th>Key Milestone</th><th>Leading Players</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2nm Silicon</td>
+          <td class="td-year">2025</td>
+          <td>TSMC N2 volume production for Apple A19, M5</td>
+          <td>TSMC, Samsung</td>
+        </tr>
+        <tr>
+          <td>1.4nm / A14 node</td>
+          <td class="td-year">2027</td>
+          <td>TSMC A14 tape-out begins — 15% gain over N2</td>
+          <td>TSMC</td>
+        </tr>
+        <tr>
+          <td>HBM4 Memory</td>
+          <td class="td-year">2025–26</td>
+          <td>1.5 TB/s per stack, 48GB capacity — for B300 and MI400 AI GPUs</td>
+          <td>SK Hynix, Samsung</td>
+        </tr>
+        <tr>
+          <td>Fault-Tolerant Quantum</td>
+          <td class="td-year">2029</td>
+          <td>IBM targets 100,000+ logical qubit system with error correction</td>
+          <td>IBM, Google, IonQ</td>
+        </tr>
+        <tr>
+          <td>Neuromorphic at Scale</td>
+          <td class="td-year">2028–30</td>
+          <td>Intel Loihi successors in edge AI products for robotics, sensing</td>
+          <td>Intel, BrainScaleS</td>
+        </tr>
+        <tr>
+          <td>Photonic Interconnects</td>
+          <td class="td-year">2027–29</td>
+          <td>Co-packaged optics replace copper in data centre switching</td>
+          <td>Ayar Labs, Intel, TSMC</td>
+        </tr>
+        <tr>
+          <td>1 Trillion Transistors</td>
+          <td class="td-year">2030</td>
+          <td>Intel's predicted milestone via 3D heterogeneous integration</td>
+          <td>Intel, TSMC, Samsung</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- DETAILED SECTIONS -->
+  <section class="reveal">
+    <div class="page-label">Deep Dive</div>
+    <h2>AI Integration</h2>
+    <p>Artificial intelligence will be embedded directly into hardware at every level of the computing stack. Apple's Neural Engine, Qualcomm's Hexagon NPU, and Intel's NPU in Meteor Lake already process AI workloads on-chip. By 2027, every CPU, smartphone SoC, and even microcontroller will include dedicated AI inference hardware.</p>
+    <p>The implication is profound: AI won't require a data centre connection. Real-time language translation, personalised recommendation, health monitoring, and autonomous navigation will all run locally — privately, instantly, and without latency.</p>
+  </section>
+
+  <section class="reveal">
+    <h2>Quantum Computing Advancements</h2>
+    <p>Quantum computing will progress through two distinct phases. The current NISQ (Noisy Intermediate-Scale Quantum) era — where machines have hundreds to thousands of qubits but significant error rates — is giving way to fault-tolerant quantum systems where error correction codes maintain logical qubits with extremely high fidelity.</p>
+    <p>McKinsey estimates quantum advantage will deliver $700 billion to $1.6 trillion in annual value by 2035, concentrated in pharmaceutical drug discovery (simulating molecular interactions), financial portfolio optimisation, logistics routing, and materials science for battery and catalyst design.</p>
+  </section>
+
+  <section class="reveal">
+    <h2>Increased Energy Efficiency</h2>
+    <p>Data centres currently consume approximately 2% of global electricity — a figure projected to reach 4–8% by 2030 as AI workloads scale. This is driving a fundamental rethinking of power delivery, cooling, and chip architecture. Gallium nitride (GaN) power electronics, immersion cooling, and direct liquid cooling at the chip level are becoming standard practice.</p>
+    <p>On the silicon side, dynamic voltage and frequency scaling (DVFS) has been supplemented by architectural efficiency improvements. Apple's M4, built on 3nm, achieves performance-per-watt levels that x86 cannot match — and this gap will widen as ARM and RISC-V architectures proliferate in data centres.</p>
+  </section>
+
+  <section class="reveal">
+    <h2>Modular Computing (UCIe)</h2>
+    <p>The Universal Chiplet Interconnect Express (UCIe) open standard, backed by AMD, Intel, ARM, TSMC, Samsung, and over 100 industry partners, defines a universal die-to-die interface. This enables a chiplet ecosystem analogous to how PCIe standardised expansion cards — mix-and-match CPU, GPU, memory controller, and I/O dies from any vendor.</p>
+    <p>The practical result: a smartphone designer could combine a TSMC 2nm CPU die with an AMD GPU die and a Samsung HBM4 memory die in a single package — previously impossible without custom integration between vendors.</p>
+  </section>
+
+  <section class="reveal">
+    <h2>Neuromorphic Computing</h2>
+    <p>Neuromorphic processors, inspired by the sparse, event-driven architecture of biological neural networks, fundamentally differ from von Neumann chips. Intel's Loihi 2 chip demonstrated 1,000× better energy efficiency than GPU-based systems on sparse inference tasks like odour recognition and robotic control.</p>
+    <p>As AI inference moves to battery-powered edge devices — hearing aids, implants, wearables, autonomous sensors — neuromorphic designs will become essential. A system that only processes data when an event occurs (a sound, a motion, a change in temperature) consumes near-zero power at rest.</p>
+  </section>
+
+  <section class="reveal">
+    <h2>3D Stacking & Advanced Packaging</h2>
+    <p>The transition from 2D to 3D integration is the defining packaging innovation of this decade. By stacking logic dies directly on top of SRAM or HBM memory with microbumps measured in micrometres, designers can achieve memory bandwidth that would require hundreds of off-package wires — reducing latency by 5–10× and power consumption by 30–50% versus conventional PCB-based integration.</p>
+    <p>Intel's Foveros 3D stacking, TSMC's SoIC, and Samsung's X-Cube all enable this — and AMD's Zen 4 3D V-Cache demonstrates tangible consumer benefits: 3D-stacked SRAM increases CPU gaming performance by up to 30% without any clock frequency changes.</p>
+  </section>
+
+  <section class="reveal">
+    <h2>Biometric Security Hardware</h2>
+    <p>Dedicated secure enclaves — Apple's Secure Enclave, ARM TrustZone, and Intel SGX — now handle biometric authentication entirely on-chip without exposing fingerprint or face data to the main OS or network. As biometric hardware becomes ubiquitous on all devices, the security architectures protecting this data are becoming as important as the sensors themselves.</p>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">Harnessing<span>Power</span></div>
+      <div class="footer-desc">B.Tech CSE · 4th Semester · Computer Hardware Project · 2025</div>
+    </div>
+    <nav class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="introduction.html">Intro</a>
+      <a href="latest-technologies.html">Tech</a>
+      <a href="future-trends.html">Trends</a>
+      <a href="resources.html">Resources</a>
+      <a href="videos.html">Videos</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Harnessing Power Project. All rights reserved.</span>
+    <span>Built with ❤ for <span class="footer-accent">B.Tech CSE</span></span>
+  </div>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
 </body>
 </html>
