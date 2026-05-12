@@ -1,47 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Harnessing Power</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Harnessing Power</title>
+  <meta name="description" content="Get in touch with the Harnessing Power project team — B.Tech CSE 4th Semester.">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .contact-layout {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 2px; background: var(--border);
+      border: 1px solid var(--border); border-radius: var(--radius);
+      overflow: hidden; margin: 0 0 48px;
+    }
+    @media (max-width: 720px) { .contact-layout { grid-template-columns: 1fr; } }
+    .contact-info-panel { background: var(--card); padding: 40px 36px; }
+    .contact-form-panel { background: var(--surface); padding: 40px 36px; }
+    .info-item {
+      display: flex; align-items: flex-start; gap: 14px;
+      padding: 16px 0; border-bottom: 1px solid var(--border);
+    }
+    .info-item:last-child { border-bottom: none; }
+    .info-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 2px; }
+    .info-label { font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+    .info-value { font-size: 0.88rem; color: var(--text); font-weight: 500; }
+    .info-value a { color: var(--accent); text-decoration: none; }
+    .info-value a:hover { text-decoration: underline; }
+    .char-counter { font-family: var(--font-mono); font-size: 0.6rem; color: var(--muted); text-align: right; margin-top: 4px; }
+    .success-msg {
+      display: none; background: var(--accent-dim);
+      border: 1px solid rgba(118,185,0,0.3); border-radius: var(--radius);
+      padding: 14px 18px; font-size: 0.82rem; color: var(--accent);
+      font-family: var(--font-mono); margin-top: 12px;
+    }
+    .faq-item { border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; margin-bottom: 4px; }
+    .faq-q {
+      width: 100%; background: var(--card); border: none;
+      padding: 18px 20px; text-align: left;
+      font-family: var(--font-head); font-weight: 600; font-size: 0.9rem;
+      color: var(--text); cursor: pointer;
+      display: flex; justify-content: space-between; align-items: center;
+      transition: background 0.2s, color 0.2s;
+    }
+    .faq-q:hover { background: var(--card-hover); color: var(--light); }
+    .faq-q.open { color: var(--accent); }
+    .faq-q .arrow { transition: transform 0.3s; font-size: 0.7rem; }
+    .faq-q.open .arrow { transform: rotate(180deg); }
+    .faq-a {
+      display: none; background: var(--surface);
+      padding: 16px 20px; font-size: 0.82rem;
+      color: var(--muted); line-height: 1.8;
+      border-top: 1px solid var(--border);
+    }
+    .faq-a.open { display: block; }
+    .reach-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 20px; }
+    .reach-tag {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 3px; padding: 8px 12px;
+      font-size: 0.75rem; color: var(--muted);
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Contact Us</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="introduction.html">Introduction</a></li>
-                <li><a href="latest-technologies.html">Latest Technologies</a></li>
-                <li><a href="future-trends.html">Future Trends</a></li>
-                <li><a href="resources.html">Resources</a></li>
-                <li><a href="contact.html">Contact</a></li>
-		<li><a href="videos.html">videos</a></li>
-            </ul>
-        </nav>
-        
-    </header>
 
-    <main>
-        <section>
-            <h2>Get in Touch</h2>
-            <p>If you have any questions or feedback, feel free to reach out!</p>
-            <form action="mailto:Jatinvermaa.29@gmail.com" method="post" enctype="text/plain">
-                <label for="name">Name:</label><br>
-                <input type="text" id="name" name="name"><br>
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email"><br>
-                <label for="message">Message:</label><br>
-                <textarea id="message" name="message" rows="4" cols="50"></textarea><br>
-                <input type="submit" value="Send">
-                <input type="reset" value="Reset">
-            </form>
-        </section>
-    </main>
+<!-- NEWS TICKER -->
+<div class="news-ticker">
+  <div class="ticker-label">📬 Contact</div>
+  <div class="ticker-track">
+    <div class="ticker-inner">
+      <span class="ticker-item">Questions about hardware specs? Drop a message — responses within 24 hours</span>
+      <span class="ticker-item">Project feedback and suggestions welcome — every message is read</span>
+      <span class="ticker-item">Found a technical error? Select "Technical Correction" in the topic dropdown</span>
+      <span class="ticker-item">Collaboration enquiries for CSE research projects also accepted</span>
+      <span class="ticker-item">Questions about hardware specs? Drop a message — responses within 24 hours</span>
+      <span class="ticker-item">Project feedback and suggestions welcome — every message is read</span>
+      <span class="ticker-item">Found a technical error? Select "Technical Correction" in the topic dropdown</span>
+    </div>
+  </div>
+</div>
 
-    <footer>
-        <p>&copy; 2024 Harnessing Power Project. All rights reserved.</p>
-    </footer>
+<header>
+  <div class="site-logo">Harnessing<span>Power</span></div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="introduction.html">Introduction</a></li>
+      <li><a href="latest-technologies.html">Technologies</a></li>
+      <li><a href="future-trends.html">Future Trends</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="videos.html">Videos</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <div class="page-header reveal">
+    <div class="page-header-left">
+      <div class="page-label">Get In Touch</div>
+      <h2>Contact Us</h2>
+    </div>
+  </div>
+
+  <!-- CONTACT SPLIT LAYOUT -->
+  <div class="contact-layout reveal">
+    <!-- LEFT: Info -->
+    <div class="contact-info-panel">
+      <div class="page-label" style="margin-bottom:20px;">Project Details</div>
+      <div class="info-item">
+        <span class="info-icon">🎓</span>
+        <div>
+          <div class="info-label">Institution</div>
+          <div class="info-value">B.Tech Computer Science Engineering<br>4th Semester · 2024–25</div>
+        </div>
+      </div>
+      <div class="info-item">
+        <span class="info-icon">📧</span>
+        <div>
+          <div class="info-label">Email</div>
+          <div class="info-value"><a href="mailto:Jatinvermaa.29@gmail.com">Jatinvermaa.29@gmail.com</a></div>
+        </div>
+      </div>
+      <div class="info-item">
+        <span class="info-icon">📖</span>
+        <div>
+          <div class="info-label">Project Topic</div>
+          <div class="info-value">Modern Computer Hardware<br>Innovations & Future Trends</div>
+        </div>
+      </div>
+      <div class="info-item">
+        <span class="info-icon">⏱️</span>
+        <div>
+          <div class="info-label">Response Time</div>
+          <div class="info-value">Within 24–48 hours</div>
+        </div>
+      </div>
+      <div style="margin-top:24px;">
+        <div class="page-label" style="margin-bottom:12px;">Reach Out For</div>
+        <div class="reach-tags">
+          <span class="reach-tag">💬 Feedback</span>
+          <span class="reach-tag">🔬 Corrections</span>
+          <span class="reach-tag">🤝 Collaboration</span>
+          <span class="reach-tag">📚 Resource tips</span>
+          <span class="reach-tag">❓ Questions</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: Form -->
+    <div class="contact-form-panel">
+      <div class="page-label" style="margin-bottom:20px;">Send a Message</div>
+      <form class="contact-form" id="contactForm" action="mailto:Jatinvermaa.29@gmail.com" method="post" enctype="text/plain">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" name="name" placeholder="Your full name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="topic">Topic</label>
+          <select id="topic" name="topic">
+            <option value="">Select a topic…</option>
+            <option value="feedback">Project Feedback</option>
+            <option value="correction">Technical Correction</option>
+            <option value="question">Hardware Question</option>
+            <option value="collaboration">Collaboration Enquiry</option>
+            <option value="resource">Resource Suggestion</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Message *</label>
+          <textarea id="message" name="message" rows="6" placeholder="Write your message here…" maxlength="1000" required oninput="document.getElementById('charCount').textContent=this.value.length"></textarea>
+          <div class="char-counter"><span id="charCount">0</span> / 1000</div>
+        </div>
+        <div class="form-actions">
+          <input type="submit" value="Send Message →">
+          <input type="reset" value="Clear" onclick="document.getElementById('charCount').textContent='0'">
+        </div>
+        <div class="success-msg" id="successMsg">✓ Message prepared — your email client will open to complete sending.</div>
+      </form>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <section class="reveal">
+    <div class="page-label" style="margin-bottom:16px;">Common Questions</div>
+    <h2>FAQ</h2>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFAQ(this)">
+        What is this project about? <span class="arrow">▼</span>
+      </button>
+      <div class="faq-a">
+        This is a B.Tech CSE 4th Semester project exploring innovations in modern computer hardware — covering processors, memory, storage, GPUs, AI accelerators, quantum computing, and future trends as of 2025. It is designed as a comprehensive educational reference on the current state of computing hardware.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFAQ(this)">
+        Where does the information come from? <span class="arrow">▼</span>
+      </button>
+      <div class="faq-a">
+        All content is researched from official company announcements (NVIDIA, Intel, AMD, IBM, Apple, TSMC), IEEE technical papers, industry conferences (Hot Chips, ISSCC, IEDM), and reputable technology publications. All hardware specifications reflect the state of the industry as of mid-2025.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFAQ(this)">
+        Can I use this project as a reference? <span class="arrow">▼</span>
+      </button>
+      <div class="faq-a">
+        Yes — this project is intended as an educational resource. For academic citation, please reference the primary sources listed in the Resources section. If you find an error or outdated information, please let us know via the contact form above.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFAQ(this)">
+        I found a technical error — how do I report it? <span class="arrow">▼</span>
+      </button>
+      <div class="faq-a">
+        Please select "Technical Correction" in the topic dropdown and describe the error and your source. Hardware specifications change rapidly and accuracy is a priority — all corrections are genuinely appreciated.
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFAQ(this)">
+        Is the project still being updated? <span class="arrow">▼</span>
+      </button>
+      <div class="faq-a">
+        The project content was last comprehensively updated in mid-2025. The hardware landscape moves extremely fast — if you see outdated information or want to suggest a new development worth covering, please send a message using the form above.
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">Harnessing<span>Power</span></div>
+      <div class="footer-desc">B.Tech CSE · 4th Semester · Computer Hardware Project · 2025</div>
+    </div>
+    <nav class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="introduction.html">Intro</a>
+      <a href="latest-technologies.html">Tech</a>
+      <a href="future-trends.html">Trends</a>
+      <a href="resources.html">Resources</a>
+      <a href="videos.html">Videos</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Harnessing Power Project. All rights reserved.</span>
+    <span>Built with ❤ for <span class="footer-accent">B.Tech CSE</span></span>
+  </div>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  function toggleFAQ(btn) {
+    const answer = btn.nextElementSibling;
+    const isOpen = btn.classList.contains('open');
+    document.querySelectorAll('.faq-q').forEach(b => b.classList.remove('open'));
+    document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
+    if (!isOpen) { btn.classList.add('open'); answer.classList.add('open'); }
+  }
+
+  document.getElementById('contactForm').addEventListener('submit', function() {
+    setTimeout(() => { document.getElementById('successMsg').style.display = 'block'; }, 300);
+  });
+</script>
 </body>
 </html>
